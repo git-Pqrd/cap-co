@@ -1,0 +1,30 @@
+
+#primary {
+  padding: $pad ;
+
+  h3 ,
+  h1 {
+    font-family: $second-font;
+  }
+  .remove {
+    color: $grey ;
+  }
+  .col-1 {
+    width: 100%;
+  }
+  .col-2 {
+    display: none ;
+  }
+  .payment_method_stripe {
+    img {
+      height: 20px ;
+      width: auto ;
+    }
+  }
+  #place_order {
+    background: $primary ;
+    color: $white ;
+    @include shadow(10px, .3) ;
+    cursor: crosshair ;
+  }
+}

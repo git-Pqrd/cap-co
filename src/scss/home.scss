@@ -1,0 +1,45 @@
+.section {
+  padding: $pad ;
+  &.grid-products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap : 50px ;
+      .card {
+        cursor: crosshair;
+        font-family: $second-font;
+        color: $white ;
+        position : relative ;
+        @include shadow(10px, .2) ;
+        .upperbox {
+          padding: 10px ;
+          img {
+            
+          }
+        }
+        .lowerbox {
+          background: $primary ;
+          font-size: 1.3rem ;
+          padding: 5px 10px ;
+        }
+        .price {
+          padding: 2px 5px ;
+          background: $primary ;
+          position: absolute ; 
+          top: 10px ;
+          left: calc( 100% - 20px );
+          transform: translateX(-50%);
+          width: auto ;
+          small {
+            line-height: .8em;
+            opacity : .5;
+            text-decoration: line-through ;
+          }
+        }
+      }
+      @media only screen and ( max-width : 900px) {
+        grid-template-columns: 1fr;
+        grid-column-gap : 0px ;
+        grid-row-gap : 5px ;
+      }
+  }
+}

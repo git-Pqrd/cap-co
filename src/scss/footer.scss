@@ -1,0 +1,16 @@
+#footer {
+  font-family: $second-font;
+  display: flex;
+  align-content: space-between;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  ul {
+    padding: 10px 0;
+    list-style: none;
+    li {
+      width: 200px;
+      padding: 0;
+    }
+  }
+}
