@@ -168,6 +168,22 @@
           color: $primary;
           line-height: 2rem;
         }
+      .titre span {
+        color: $grey;
+        font-size: 2rem;
+        line-height: 3rem;
+        opacity: .6;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .titre span.active {
+        color: $primary;
+        font-size: 2rem;
+        line-height: 3rem;
+        cursor: crosshair ;
+        opacity: 1;
+      }
         .cat {
           color: $grey;
           font-size: 2rem;
