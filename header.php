@@ -26,7 +26,7 @@ section and everything up until
       <header id="nav" class="site-header">
         <a class="logo" href="/"><span>Cap & Co.</span></a>
         <a class="accueil" href="/">Home.</a>
-        <a class="apropos" href="/apropos">About.</a>
+        <a class="apropos" href="/about">About.</a>
         <a class="panier" href="<?php echo  wc_get_cart_url(); ?>"
           >Cart.
           <span>
