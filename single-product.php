@@ -10,6 +10,7 @@
         href="<?php  echo $image[0]; ?>"
         data-mediabox="<?php echo get_the_id(); ?>"
         data-title="<?php echo $product->get_title(); ?>"
+        data-id="<?php echo $product->get_id(); ?>"
       >
         <img
           src="<?php  echo $image[0]; ?>"
@@ -40,20 +41,33 @@
     </div>
 
     <div class="content">
-      <div class="titre"><?php echo $product->get_title(); ?></div>
+      <div class="titre"><?php echo $product->get_title(); ?>
+      <?php if ($product->is_type("variable") && ! empty($product->get_variation_attributes())): ?>
+      <div> In :  </div> 
+      <div class="">
+        <?php $variations_info = find_product_variation($product); ?>
+        <?php foreach ($variations_info as $var): ?>
+            <span class="variants-btn" data-pdt="<?php echo $product->get_id();?>" data-id="<?php echo($var['id']); ?>">
+                  <?php echo  ( $var['attr']['attribute_pa_color'] ); ?>
+          </span>
+        <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      </div>
       <div class="cat"><?php echo  $product->get_categories(); ?></div>
       <div class="text"><?php echo $product->get_short_description(); ?></div>
       <div class="button cartBtn">
-
         <a
           data-title="<?php echo the_title(); ?>"
           data-cart="<?php echo wc_get_cart_url(); ?>"
           data-action="add"
           data-url="<?php echo admin_url('admin-ajax.php'); ?>"
-          data-item="<?php echo $product->get_id() ?>"
-          class="more" >Acheter !</a
+          data-id="<?php echo $product->get_id() ?>"
+          class="more"
+          >Add to Cart!</a
         >
       </div>
+
 
       <div class="price">
         <?php if ($product->is_on_sale() && $product->is_type( "simple" ) ) { ?>

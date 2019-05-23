@@ -18,10 +18,10 @@
       <a class="logo" href="/"><span>Cap & Co.</span></a>
     </li>
     <li>
-      <a class="accueil" href="/">Accueil</a>
+      <a class="accueil" href="/">Home</a>
     </li>
     <li>
-      <a class="apropos" href="/apropos">À Propos</a>
+      <a class="apropos" href="/about">About</a>
     </li>
     <li>
         <a class="panier" href="<?php echo  wc_get_cart_url(); ?>"

@@ -51,7 +51,37 @@
       .titre {
         font-size: 2.5rem;
         color: $primary;
-        line-height: 2rem;
+        line-height: 3rem;
+        display : flex ;
+        align-content : center ;
+        justify-content : flex-start ;
+        flex-direction : row ;
+        flex-wrap : wrap ;
+      }
+      .titre div {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        color: $grey;
+        margin : 0 ;
+        margin-left : 10px ;
+        margin-right : 10px ;
+      }
+      .titre span {
+        color: $grey;
+        font-size: 2rem;
+        line-height: 3rem;
+        cursor: crosshair ;
+        opacity: .9;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .titre span.active {
+        color: $primary;
+        font-size: 2rem;
+        line-height: 3rem;
+        cursor: crosshair ;
+        opacity: 1;
       }
       .cat {
         color: $grey;

@@ -7,6 +7,7 @@
  *                  AJAX FUNCTIONS
  *                      ========================
  */
+
 add_action( 'wp_ajax_nopriv_add_remove', 'add_remove' );
 add_action( 'wp_ajax_add_remove', 'add_remove' );
 function add_remove() {
