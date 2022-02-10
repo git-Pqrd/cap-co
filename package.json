@@ -25,7 +25,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0",
     "sweetalert": "^2.1.2",
     "wa-mediabox": "^1.0.1"
